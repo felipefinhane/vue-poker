@@ -1,7 +1,6 @@
 <template>
   <footer class="app-footer">
-    <span><a href="http://coreui.io">CoreUI</a> &copy; 2018 creativeLabs.</span>
-    <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
+    <span class="ml-auto">(2018) Powered by <a href="http://dev.finhane.com">Finhane.com</a></span>
   </footer>
 </template>
 <script>
