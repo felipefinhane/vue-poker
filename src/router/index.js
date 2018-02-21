@@ -10,6 +10,7 @@ import Ranking from '@/views/Report/Ranking'
 import SerieList from '@/views/Serie/SerieList'
 import GameList from '@/views/Game/GameList'
 import PlayerList from '@/views/Player/PlayerList'
+import PlayerForm from '@/views/Player/PlayerForm'
 import UserList from '@/views/User/UserList'
 
 Vue.use(Router)
@@ -33,34 +34,74 @@ export default new Router({
       ]
     },
     {
-      path: '/',
+      path: '/ranking',
       redirect: '/ranking',
       name: 'Ranking',
-      component: Ranking
+      component: Full,
+      children: [
+        {
+          path: '/ranking',
+          name: 'Ranking',
+          component: Ranking
+        }
+      ]
     },
     {
-      path: '/',
+      path: '/serie',
       redirect: '/serie/list',
-      name: 'SerieList',
-      component: SerieList
+      name: 'Campeonato',
+      component: Full,
+      children: [
+        {
+          path: '/serie/list',
+          name: 'Listagem',
+          component: SerieList
+        }
+      ]
     },
     {
-      path: '/',
+      path: '/game',
       redirect: '/game/list',
-      name: 'GameList',
-      component: GameList
+      name: 'Partida',
+      component: Full,
+      children: [
+        {
+          path: '/game/list',
+          name: 'Listagem',
+          component: GameList
+        }
+      ]
     },
     {
-      path: '/',
+      path: '/player',
       redirect: '/player/list',
-      name: 'PlayerList',
-      component: PlayerList
+      name: 'Participantes',
+      component: Full,
+      children: [
+        {
+          path: '/player/list',
+          name: 'Listagem',
+          component: PlayerList
+        },
+        {
+          path: '/player/new',
+          name: 'Novo',
+          component: PlayerForm
+        }
+      ]
     },
     {
-      path: '/',
+      path: '/user',
       redirect: '/user/list',
-      name: 'UserList',
-      component: UserList
+      name: 'Usuario',
+      component: Full,
+      children: [
+        {
+          path: '/user/list',
+          name: 'Listagem',
+          component: UserList
+        }
+      ]
     }
   ]
 })

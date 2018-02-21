@@ -1,11 +1,11 @@
 {
-  "name": "@coreui/vue",
-  "version": "1.0.10",
-  "description": "Open Source Bootstrap Admin Template",
-  "author": "Łukasz Holeczek",
-  "homepage": "http://coreui.io",
-  "copyright": "Copyright 2018 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
+  "name": "@syspoker/vue",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "homepage": "",
+  "copyright": "",
+  "license": "",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
