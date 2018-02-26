@@ -1,6 +1,6 @@
 <template>
   <b-card :header="caption">
-    <button type="button" class="btn btn-primary btn-sm" href="/player/new">Novo Participante</button>
+    <button type="button" class="btn btn-primary btn-sm" href="#/player/new">Novo Participante</button>
     <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage">
       <template slot="status" slot-scope="data">
         <b-badge :variant="getBadge(data.item.status)">{{data.item.status}}</b-badge>

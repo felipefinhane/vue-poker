@@ -1,64 +1,54 @@
 <template>
   <div class="animated fadeIn">
     <b-row>
-      <b-col lg="12">
-        <b-card no-body>
+      <b-col md="12">
+        <b-card>
           <div slot="header">
-            <i class="fa fa-edit"></i> Cadastro de Participante
-            <div class="card-actions">
-              <a href="#" class="btn btn-setting"><i class="icon-settings"></i></a>
-              <b-btn class="btn btn-minimize" v-b-toggle.collapse1><i class="icon-arrow-up"></i></b-btn>
-              <a href="#" class="btn btn-close"><i class="icon-close"></i></a>
-            </div>
+            <strong>Cadastro de Participantes</strong>
           </div>
-          <b-collapse id="collapse1" visible>
-            <b-card-body>
-              <b-form-group label="Prepended text" label-for="elementsEmail" description="Here's some help text">
-                <b-input-group>
-                  <b-input-group-prepend>
-                    <b-input-group-text>@</b-input-group-text>
-                  </b-input-group-prepend>
-                  <b-form-input id="elementsEmail" type="email"></b-form-input>
-                </b-input-group>
-              </b-form-group>
-              <b-form-group label="Appended text" label-for="elementsAppend" description="Here's some help text">
-                <b-input-group>
-                  <b-form-input id="elementsAppend" type="text"></b-form-input>
-                  <b-input-group-append><b-input-group-text>.00</b-input-group-text></b-input-group-append>
-                </b-input-group>
-              </b-form-group>
-              <b-form-group label="Append and prepend" label-for="elementsPrependAppend" description="Here's some help text">
-                <b-input-group>
-                  <b-input-group-prepend>
-                    <b-input-group-text>$</b-input-group-text>
-                  </b-input-group-prepend>
-                  <b-form-input id="elementsPrependAppend" type="text"></b-form-input>
-                  <b-input-group-append><b-input-group-text>.00</b-input-group-text></b-input-group-append>
-                </b-input-group>
-              </b-form-group>
-              <b-form-group label="Append with button" label-for="elementsAppendButton" description="Here's some help text">
-                <b-input-group>
-                  <b-form-input id="elementsAppendButton" type="text"></b-form-input>
-                  <b-input-group-append>
-                    <b-button variant="primary">Go!</b-button>
-                  </b-input-group-append>
-                </b-input-group>
-              </b-form-group>
-              <b-form-group label="Two-buttons append" label-for="elementsTwoButtons">
-                <b-input-group>
-                  <b-form-input id="elementsTwoButtons" type="text"></b-form-input>
-                  <b-input-group-append>
-                    <b-button variant="primary">Search</b-button>
-                    <b-button variant="danger">Options</b-button>
-                  </b-input-group-append>
-                </b-input-group>
-              </b-form-group>
-              <div class="form-actions">
-                <b-button type="submit" variant="primary">Save changes</b-button>
-                <b-button type="button" variant="secondary">Cancel</b-button>
-              </div>
-            </b-card-body>
-          </b-collapse>
+          <b-form-group
+            description="Por favor, coloque o nome do participante."
+            label="Nome"
+            label-for="name"
+            :label-cols="3"
+            :horizontal="true">
+            <b-form-input id="name" type="text" placeholder="Nome"></b-form-input>
+          </b-form-group>
+          <b-form-group
+            description="Por favor, coloque o email"
+            label="Email"
+            label-for="email"
+            :label-cols="3"
+            :horizontal="true">
+            <b-form-input id="email" type="email" placeholder="Email"></b-form-input>
+          </b-form-group>
+          <b-form-group
+            label="Usuario"
+            label-for="username"
+            :label-cols="3"
+            :horizontal="true">
+            <b-form-input plaintext id="username" type="text" value="Email"></b-form-input>
+          </b-form-group>
+          <b-form-group
+            description="Por favor, coloque a senha"
+            label="Senha"
+            label-for="password"
+            :label-cols="3"
+            :horizontal="true">
+            <b-form-input id="password" type="password" placeholder="Senha"></b-form-input>
+          </b-form-group>
+          <b-form-group
+            description="Por favor, coloque o telefone"
+            label="Telefone"
+            label-for="phone"
+            :label-cols="3"
+            :horizontal="true">
+            <b-form-input id="phone" type="phone" placeholder="Número do telefone"></b-form-input>
+          </b-form-group>
+          <div slot="footer">
+            <b-button type="submit" size="sm" variant="primary"><i class="fa fa-dot-circle-o"></i> Salvar</b-button>
+            <b-button type="reset" size="sm" variant="danger"><i class="fa fa-ban"></i> Cancelar</b-button>
+          </div>
         </b-card>
       </b-col>
     </b-row>
@@ -67,7 +57,7 @@
 
 <script>
 export default {
-  name: 'forms',
+  name: 'PlayerForm',
   data () {
     return {
       selected: [] // Must be an array reference!

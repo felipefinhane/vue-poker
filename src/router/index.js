@@ -56,6 +56,11 @@ export default new Router({
           path: '/serie/list',
           name: 'Listagem',
           component: SerieList
+        },
+        {
+          path: '/serie/list',
+          name: 'Listagem',
+          component: SerieList
         }
       ]
     },
